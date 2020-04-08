@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    enum Operations {
+  enum Operations {
         case add
         case subtract
         case multiply
