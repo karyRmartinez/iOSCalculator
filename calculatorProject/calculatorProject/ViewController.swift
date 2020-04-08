@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         case multiply
         case divide
     }
+    var currentOperation: Operation!
+    
     
     lazy var BackgroundView: UIView = {
         let view = UIView()
