@@ -48,7 +48,17 @@ class calculatorViewController: UIViewController {
         }
         
         for x in 0..<3 {
-            
+            let buttons4through6 = UIButton(frame: CGRect(x: buttonsConstraints * CGFloat(x),y: BackgroundView.frame.size.height-(buttonsConstraints*3), width: buttonsConstraints, height: buttonsConstraints))
+            buttons4through6.setTitle("\(x+4)", for: .normal)
+            buttons4through6.tag = x+5
+            BackgroundView.addSubview(buttons4through6)
+        }
+        for x in 0..<3 {
+            let buttons7through9 = UIButton(frame:CGRect(x: buttonsConstraints * CGFloat(x),y:
+                BackgroundView.frame.size.height-(buttonsConstraints*4), width: buttonsConstraints, height: buttonsConstraints))
+            buttons7through9.setTitle("\(x+7)", for: .normal)
+            buttons7through9.tag = x+8
+            BackgroundView.addSubview(buttons7through9)
         }
     }
     
