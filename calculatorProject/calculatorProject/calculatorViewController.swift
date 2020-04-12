@@ -24,13 +24,17 @@ class calculatorViewController: UIViewController {
     
     @IBOutlet var BackgroundView: UIView!
     
-
     
     //interface
     private func setUpPad() {
         let buttonsConstraints: CGFloat = view.frame.size.width / 4
         
         let operations = ["=","+","-","x","/"]
+        
+        let acButton = UIButton(frame: CGRect(x: 0, y: BackgroundView.frame.size.height-(buttonsConstraints*5), width: view.frame.size.width - buttonsConstraints, height: buttonsConstraints))
+        acButton.setTitle("AC", for: .normal)
+        BackgroundView.addSubview(acButton)
+        
         for x in 0..<5 {
             let Sidebuttons = UIButton(frame: CGRect(x: buttonsConstraints * 3, y: BackgroundView.frame.size.height-(buttonsConstraints * CGFloat(x+1)),
            width:  buttonsConstraints, height: buttonsConstraints))
@@ -60,6 +64,12 @@ class calculatorViewController: UIViewController {
             buttons7through9.tag = x+8
             BackgroundView.addSubview(buttons7through9)
         }
+        
+        let buttonZero = UIButton(frame: CGRect(x: 0, y: BackgroundView.frame.size.height-buttonsConstraints, width: buttonsConstraints*3, height: buttonsConstraints))
+            buttonZero.setTitle("0", for: .normal)
+        buttonZero.tag = 1
+        BackgroundView.addSubview(buttonZero)
+        
     }
     
     override func viewDidLoad() {
