@@ -42,6 +42,7 @@
                     </view>
                     <connections>
                         <outlet property="BackgroundView" destination="FDv-63-odc" id="f2C-6g-A5q"/>
+                        <outlet property="resultsLabel" destination="T48-vD-l4R" id="69P-MI-n6K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
