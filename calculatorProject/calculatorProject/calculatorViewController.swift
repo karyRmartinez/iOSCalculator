@@ -35,12 +35,14 @@ class calculatorViewController: UIViewController {
         
         let acButton = UIButton(frame: CGRect(x: 0, y: BackgroundView.frame.size.height-(buttonsConstraints*5), width: view.frame.size.width - buttonsConstraints, height: buttonsConstraints))
         acButton.setTitle("AC", for: .normal)
+         Utilities.NumberButtonsDesign(button: acButton, symbol: String.init()  )
         BackgroundView.addSubview(acButton)
         
         let operations = ["=","+","-","x","/"]
         for x in 0..<5 {
             let Sidebuttons = UIButton(frame: CGRect(x: buttonsConstraints * 3, y: BackgroundView.frame.size.height-(buttonsConstraints * CGFloat(x+1)),
            width:  buttonsConstraints, height: buttonsConstraints))
+            Utilities.sideButtonsDesign(button: Sidebuttons, symbol: String.init()  )
             Sidebuttons.setTitle(operations[x], for: .normal)
             Sidebuttons.tag = x+1
             BackgroundView.addSubview(Sidebuttons)
@@ -49,6 +51,7 @@ class calculatorViewController: UIViewController {
         
         for x in 0..<3 {
             let buttons1through3 = UIButton(frame: CGRect(x: buttonsConstraints * CGFloat(x),y: BackgroundView.frame.size.height-(buttonsConstraints*2), width: buttonsConstraints, height: buttonsConstraints))
+            Utilities.NumberButtonsDesign(button: buttons1through3, symbol: String.init()  )
             buttons1through3.setTitle("\(x+1)", for: .normal)
             buttons1through3.tag = x+2
             BackgroundView.addSubview(buttons1through3)
@@ -57,6 +60,7 @@ class calculatorViewController: UIViewController {
         
         for x in 0..<3 {
             let buttons4through6 = UIButton(frame: CGRect(x: buttonsConstraints * CGFloat(x),y: BackgroundView.frame.size.height-(buttonsConstraints*3), width: buttonsConstraints, height: buttonsConstraints))
+             Utilities.NumberButtonsDesign(button: buttons4through6, symbol: String.init()  )
             buttons4through6.setTitle("\(x+4)", for: .normal)
             buttons4through6.tag = x+5
             BackgroundView.addSubview(buttons4through6)
@@ -65,6 +69,7 @@ class calculatorViewController: UIViewController {
         for x in 0..<3 {
             let buttons7through9 = UIButton(frame:CGRect(x: buttonsConstraints * CGFloat(x),y:
                 BackgroundView.frame.size.height-(buttonsConstraints*4), width: buttonsConstraints, height: buttonsConstraints))
+             Utilities.NumberButtonsDesign(button: buttons7through9, symbol: String.init()  )
             buttons7through9.setTitle("\(x+7)", for: .normal)
             buttons7through9.tag = x+8
             BackgroundView.addSubview(buttons7through9)
@@ -74,6 +79,7 @@ class calculatorViewController: UIViewController {
         
         let buttonZero = UIButton(frame: CGRect(x: 0, y: BackgroundView.frame.size.height-buttonsConstraints, width: buttonsConstraints*3, height: buttonsConstraints))
             buttonZero.setTitle("0", for: .normal)
+         Utilities.NumberButtonsDesign(button: buttonZero, symbol: String.init()  )
         buttonZero.tag = 1
         BackgroundView.addSubview(buttonZero)
           buttonZero.addTarget(self, action: #selector(clearResult), for: .touchUpInside)
